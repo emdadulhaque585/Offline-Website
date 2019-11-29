@@ -1,0 +1,631 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <style type="text/css" > 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI" Tahoma sans-serif Verdana;
+            /*font-family:Verdana;*/
+            font-size: 18px;
+        }
+
+        #container {
+        }
+        
+        #fix{
+            overflow:hidden;
+        }
+        
+         #left ul li {
+            list-style: none;
+            float: left;
+            padding: 10px 0 15px;
+            margin-right: 15px;
+        }
+            #left ul li:hover {
+                background: #CF4141;
+            }
+            
+            
+             #left ul li a {
+                text-decoration: none;
+                font-size: 16px;
+                color: #F1F1F1;
+            }
+
+        #right ul li {
+            list-style: none;
+            float: right;
+            padding: 10px 0 15px;
+            margin-right: 15px;
+        }
+            #right ul li:hover {
+                background: #CF4141;
+            }
+            
+             #right ul li a {
+                text-decoration: none;
+                font-size: 16px;
+                color: #F1F1F1;
+            }
+        /*Social media Icon*/
+
+            .fa {
+                padding: 15px;
+                font-size: 16px;
+                width: 15px;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+            }
+
+            .fa:hover {
+                opacity: 0.7;
+                /*background: #CF4141;*/
+             }
+
+        /*Menu csss*/
+
+        #menu li {
+            list-style: none;
+            margin: 0;
+            background:rgba(0,0,0,0.2);
+            margin-right:5px;
+            
+        }
+
+        #clearfix:after {
+            display: block;
+            clear: both;
+        }
+
+            #menu > ul > li {
+                float: left;
+                display: inline-block;
+                position: relative;
+                font-size: 16px;
+                height: 50px;
+            }
+
+            #menu > ul > li > a {
+                padding: 10px 10px;
+                display: inline-block;
+                /*text-shadow: 0px 1px 0px rgba(0,0,0,0.4);*/
+                font-weight: lighter;
+                cursor: pointer;
+                text-decoration:none;
+                color:#333;
+            }
+
+            #menu > ul > li:hover {
+                background: #CF4141;
+            }
+
+        #sub-menu {
+            width: 100%;
+            padding: 5px 0px;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity linear 0.15s;
+            box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+            /*background: #2e2728;*/
+            visibility:hidden;
+        }
+
+            #sub-menu li {
+                display: block;
+                font-size: 16px;
+            }
+
+                #sub-menu li a {
+                    padding: 10px 15px;
+                    display: block;
+                    text-decoration: none;
+                    background: #F1F1F1;
+                    cursor: pointer;
+                    color:#333;
+                }
+
+                    #sub-menu li a:hover, .sub-menu a {
+                        /*background: #3e3436;*/
+                        /*background: #BF1430;*/
+                        background: #CF4141;
+                    }
+
+        #menu li:hover #sub-menu {
+            z-index: 1;
+            opacity: 1;
+            visibility:visible;
+        }
+        /*CSS for all 'a'*/
+        /*a{
+            text-decoration:none;
+            color:#333;
+        }*/
+    </style>
+
+</head>
+<body>
+
+    <div id="container">
+        
+        <div id="signarea fix"style="width: 100%; height: 50px; background: #333333;margin-top:0;margin-bottom:0;" >
+            <div id="signarea-main" style="width:1080px;margin:20px auto">
+                <div id="left" style="width:20%;float:left;">
+                    <ul>
+                        <li style="border-right:1px solid #f1f1f1;padding-right:15px;"><a href="allpage/loginpage.html">Login</a></li>
+                        
+                        <li><a href="allpage/registerform.html">Register</a></li>
+                    </ul>
+                </div>
+                <div id="social-media" style="width:40%;float:left; margin-left:140px;">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+                <div id="right" style="width:20%;float:right;">
+                    <!--<input type="button" value="Calculator" style="float:right;margin:15px 0 15px;"/>-->
+                    <ul>
+                        <!--<li style="border-left:1px solid #f1f1f1;padding-left:15px;"><a href="#">English</a></li>-->
+                        <li style="border-left:1px solid #f1f1f1;padding-left:10px;margin-top:0;padding-top:0;height:48px; color:white; font-size:17px;">
+                            <a href="#cartarea">Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+                        
+                        <li style="margin-top:0;padding-right:10px; padding-top:0;height:48px; color:white;cursor:pointer; font-size:17px;"><a>Language<i class=" fa fa-language" aria-hidden="true"></i></a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div id="menuarea fix"style="width: 100%; height: 70px; background: #FFFFFF;top: 0;">
+            <div id="menuarea-main" style="width:1080px;margin:20px auto">
+                <div id="impex" style="width:20%;float:left;">
+                    <a href="#" style="text-decoration:none;color:#333;">
+                        <h2 style="font-size:35px;margin-top:0;margin-bottom:0px;">Im<span style="color: #CF4141;">Pex</span></h2>
+                        <p style="float:left;font-size:12px;font-weight:lighter;">Ultimate Fashion House</p>
+                    </a>
+                    <!--<h2 style="font-size:35px;margin-top:0">Im<span style="color: #CF4141;">Pex</span></h2>
+                    <p style="float:left;font-size:12px;font-weight:lighter;">Ultimate Fashion House</p>-->
+                </div>
+                <div id="menu" style="width:65%; margin:0 auto">
+                    <ul id="clearfix">
+                        <li><a href="homepage.html">HOME</a></li>
+                        <li>
+                            <a href="allpage/registerform.html">INDEXDB</a>
+                            <!--<ul id="sub-menu">
+                                <li><a href="allpage/gentsitem.html">MAN'S ITEM</a></li>
+                                <li><a href="allpage/ladiesitem.html">LADIES'S</a></li>
+                                <li><a href="allpage/kidsitem.html">KID'S ITEM</a></li>
+                            </ul>-->
+                        </li>
+                        <li>
+                            <a href="allpage/game.html">PUZZLE GAME</a>
+                            <!--<ul id="sub-menu">
+                                <li><a href="allpage/game.html">PLAY GAMES</a></li>
+                                <li><a href="allpage/video.html">VIDEO'S</a></li>
+                                
+                            </ul>-->
+                        </li>
+                        <li>
+                            <a href="#contactarea">CONTACT US</a>
+                            <ul id="sub-menu">
+                                <li><a href="#sendsmsarea">SEND SMS</a></li>
+                                
+                                <li><a href="allpage/location.html">LOCATION</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="allpage/about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+                <div id="search" style="width:10%;float:right">
+                    <input type="text" placeholder="Search Any Product"/>
+                    
+                    <input type="button" value="Search"style="float:left;margin-left:162px;" />
+                </div>
+            </div>
+        </div>
+       
+        <div id="slideshow" style="width:1240px;margin:20px auto; height:400px;position:relative">
+            <div style="position:absolute;width:100%;">
+
+                <img src="slide/slide7.jpg" />
+                
+                
+            </div>
+            <div style="position:absolute;width:100%;">
+                
+                <img src="slide/slide8.jpg" />
+                <!--<h2 style="margin-top:-220px;margin-left:230px;">Im<span style="color: #CF4141;">Pex</span> Fashion</h2>
+                
+                <button style="margin-top:-100px;margin-left:230px;">BUY NOW</button>
+                <h3 style="margin-top:-50px;margin-left:230px;">Buy your most choichable products,</h3>-->
+            </div>
+            <div style="position:absolute">
+                <img src="slide/slide02.JPG" />
+            </div>
+            <div style="position:absolute">
+                <img src="slide/slide03.jpeg" />
+            </div>
+        </div>
+        <div id="products-area fix" style="width: 1080px; margin: 20px auto; height: 400px; margin-top: 50px; margin-bottom:15px;">
+            <div style="width: 250px; height:60px; margin: 5px auto; text-align:center;color:#333;font-weight:normal;margin-bottom:25px">
+                <h3 style="border-bottom: 3px solid #CF4141">NEW ARIVAL</h3>
+            </div>
+            <div id="items1" style="width:30%; height:92%; float:left;background:url('products/gents1.jpg'); margin:15px">
+                
+                <div id="items-details1" style="width: 100%; height: 100%; background: rgba(0,0,0,0.5); text-align: center;">
+                    
+                        <div style="text-align:center; padding-top:40px; color:white;">
+                            <h3 style="border-bottom:1px solid #f5e107;">Gents Items</h3>
+                            <p>Code :P99</p>
+                            <p>Price :$23.00</p>
+                            <p>Status :Available</p>
+                        </div>
+
+                        <div id="items-order" style="width: 100%; height: 20%;text-align:center; margin-top:115px;">
+                            <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-cart-plus" aria-hidden="true" title="Add To Cart" ></i></a>
+                            <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-heart-o" aria-hidden="true" title="LIKE" style="height:9px;"></i></a>
+                            <a href="allpage/gentsitem.html" style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-eye" aria-hidden="true" title="See Details" style="height:9px;"></i></a>
+                            <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-shopping-bag" aria-hidden="true" title="Shooping" style="height:9px;"></i></a>
+                           
+                        </div>
+                    
+                </div>
+                
+            </div>
+            <div id="items2" style="width: 30%; height: 92%; float: left; background: url('products/kids1.jpg'); margin: 15px; ">
+                <div id="items-details2" style="width: 100%; height: 100%; background: rgba(0,0,0,0.5); text-align: center;">
+                    
+                        <div style="text-align:center; padding-top:40px; color:white;">
+                            <h3 style="border-bottom:1px solid #f5e107;">Kid's Items</h3>
+                            <p>Code :P99</p>
+                            <p>Price :$23.00</p>
+                            <p>Status :Available</p>
+                        </div>
+                    
+                    <div id="items-order" style="width: 100%; height: 20%;text-align:center; margin-top:115px;">
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-cart-plus" aria-hidden="true" title="Add To Cart" style="height:9px;"></i></a>
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-heart-o" aria-hidden="true" title="LIKE" style="height:9px;"></i></a>
+                        <a href="allpage/kidsitem.html" style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-eye" aria-hidden="true" title="See Details" style="height:9px;"></i></a>
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-shopping-bag" aria-hidden="true" title="Shooping" style="height:9px;"></i></a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div id="items3" style="width: 30%; height: 92%; float: left; background: url('products/ladies1.jpg'); margin: 15px; ">
+                <div id="items-details3" style="width: 100%; height: 100%; background: rgba(0,0,0,0.5); text-align: center;">
+                    
+                        <div style="text-align:center; padding-top:40px; color:white;">
+                            <h3 style="border-bottom:1px solid #f5e107;">Ladies's Items</h3>
+                            <p>Code :P99</p>
+                            <p>Price :$23.00</p>
+                            <p>Status :Available</p>
+                        </div>
+                    
+                    <div id="items-order" style="width: 100%; height: 20%;text-align:center; margin-top:115px;">
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;height:30px"><i class="fa fa-cart-plus" aria-hidden="true" title="Add To Cart" style="height:9px;"></i></a>
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-heart-o" aria-hidden="true" title="LIKE" style="height:9px;"></i></a>
+                        <a href="allpage/ladiesitem.html" style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-eye" aria-hidden="true" title="See Details" style="height:9px;"></i></a>
+                        <a style="border:1px solid white; cursor:pointer;font-size:35px;"><i class="fa fa-shopping-bag" aria-hidden="true" title="Shooping" style="height:9px;"></i></a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+        <div id="cartarea" style="width:1200px;margin:20px auto; margin-top:100px;margin-bottom:50px;">
+            
+                <div id="cart" style="width: 250px; height:70px; margin: 5px auto; text-align:center;color:#333;font-weight:normal;margin-bottom:50px">
+                    <h3 style="padding-top:20px;border-bottom:3px solid #CF4141;">CART DETAILS</h3>
+                </div>
+                <div id="shoopingcart" style="width:30%;float:left;margin-left:35px;">
+                    <button id="shoopingcart"class="btn btn-primary"type="button" style="width:90%;height:40px;margin:5px auto;font-size:25px">Shooping Cart</button>
+                </div>
+                <div id="checkout" style="width:30%;float:left;margin-left:35px;">
+                    <button id="checkout" class="btn btn-default" type="button" style="width:90%;height:40px;margin:5px auto;font-size:25px;">Check-Out</button>
+                </div>
+                <div id="completeorder" style="width:30%;float:left;margin-left:35px">
+                    <button id="completeorder"class="btn btn-success" type="button" style="width:90%;height:40px;margin:5px auto;font-size:25px;">Complete Order</button>
+                </div>
+          </div>
+            <div id="shoopingcartclk" style="width:1080px; margin:20px auto; padding-top:50px; height:400px">
+                
+                    <table style="width: 90%; margin: 5px auto; margin-top: 50px; " class="table table-bordered">
+                        
+                        <thead>
+                            <tr style="font-size:15px;font-family:sans-serif;height:60px;background:#54fe05;">
+                                <th>IMAGE</th>
+                                <th>PRODUCT NAME</th>
+                                <th>UNIT PRICE</th>
+                                <th>QUANTITY</th>
+                                <th>TOTAL</th>
+                                <th>REMOVE</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="text-align:center;">
+                                <td><img src="slide/shirt.jpg" /></td>
+                                <td>Abercombie & Fitch</td>
+                                <td>$132</td>
+                                <td>2</td>
+                                <td>$132</td>
+                                <td><i class="fa fa-trash" aria-hidden="true" style="color:red;font-size:30px;cursor:pointer"></i></td>
+                            </tr>
+                            <tr style="text-align:center;">
+                                <td><img src="slide/shirt1.jpg" /></td>
+                                <td>Abercombie & Fitch</td>
+                                <td>$150</td>
+                                <td>5</td>
+                                <td>$150</td>
+                                <td><i class="fa fa-trash" aria-hidden="true" style="color:red;font-size:30px;cursor:pointer;"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+            </div>
+
+        <div id="completeorderclk" style="width:1080px; margin:20px auto; padding-top:100px;">
+            
+            <table class="table table-striped">
+                <caption>YOUR ORDERS</caption>
+                <thead>
+                    <tr>
+                        <th>Products</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abercombie & Fitch</td>
+                        <td>$1,480.00</td>
+                    </tr>
+                    <tr>
+                        <td>Abercombie & Fitch</td>
+                        <td>$1,280.00</td>
+                    </tr>
+                    <tr>
+                        <td>Abercombie & Fitch</td>
+                        <td>$1,180.00</td>
+                    </tr>
+                    <tr>
+                        <th>SUBTOTAL</th>
+                        <td>$3,780.00</td>
+                    </tr>
+                    <tr>
+                        <th>SHIPPING</th>
+                        <td><input type="radio"/> FLAT RATE :$10<br /><input type="radio"/> FREE SHIPPING</td>
+                    </tr>
+                    <tr>
+                        <th>TOTAL</th>
+                        <th>$41,211.00</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                        <input type="radio" /> Direct Bank Transfer<br />
+                        <input type="radio" /> Cheque Payment<br />
+                            <input type="radio" /> Cash on Delivery<br />
+                            <input type="radio" /> FREE SHIPPING
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><button class="btn btn-toolbar btn-success"><a href="allpage/loginpage.html">PLACE ORDER</a></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="checkoutclk" style="width:1080px; margin:20px auto; padding-top:100px;">
+            <table class="table table-striped">
+                <tr>
+                    <td colspan="2"><i class="fa fa-comment" aria-hidden="true"></i> Returning customer? <a href="allpage/loginpage.html">Click here to login.</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><i class="fa fa-apply" aria-hidden="true"></i> Have A Coupon? <a id="showcoupon">Click here to enter your code</a></td>
+                </tr>
+            </table>
+            <table id="coupon" class="table table-bordered">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Coupon Code"/><br /><br />
+                        <button class="btn btn-danger"><a href="#" style="color:white;">APPLY COUPON</a></button>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-striped" id="billing">
+                <caption>Billing Details</caption>
+                <tr>
+                    <td><label>First Name *</label><br /><input type="text" placeholder="First Name"/></td>
+                    <td><label>Last Name *</label><br /><input type="text" placeholder="Last Name" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>Company Name *</label><br /><input type="text" placeholder="Company Name" /></td>
+                </tr>
+                <tr>
+                    <td><label>Email *</label><br /><input type="text" placeholder="Email Address" /></td>
+                    <td><label>Phone Number *</label><br /><input type="text" placeholder="Phone No" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <label>First Name *</label><br />
+                        <select>
+                            <option selected>Bangladesh</option>
+                            <option>India</option>
+                            <option>Nepal</option>
+                            <option>Pakistan</option>
+                            <option>Bhutan</option>
+                            <option>Australia</option>
+                            <option>Japan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label>Address *</label> <br />
+                        <input type="text" placeholder="City" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" placeholder="P.S Station" /></td>
+                    
+                </tr>
+                
+            </table>
+        </div>
+        <!--Contactarea-->
+        <div id="contactarea" style="width: 100%; height: 300px; background: #333333">
+            <div id="cnontactdiv" style="width: 1080px; height: 300px; margin:20px auto">
+                <div id="directcontact" style="width:30%;height:100%; float:left;">
+                    <div id="contactus" style="width:100%;height:40px;color:white;margin-bottom:15px;margin-top:40px;margin-left:50px;">
+                        <h4>CONTACT US</h4>
+                    </div>
+                    <div id="contactiocn" style="width:60px;float:left;">
+                        
+                        <a><i class="fa fa-address-card" aria-hidden="true" style="width:100%;float:left;font-size:35px;color:white;"></i></a>
+                        
+                        <i class="fa fa-map-marker" aria-hidden="true" style="width:100%;float:left;font-size:35px;color:white;"></i>
+                        <a><i class="fa fa-phone-square" aria-hidden="true" style="width:100%;float:left;font-size:35px;color:white;"></i></a>
+                    </div>
+                    <div id="contactstring" style="width:150px;float:left;margin-left:20px;color:white;font-size:14px;margin-top:15px;">
+                        <p>276(C) East Nakhal Para <br /> Tejgaon, Dhaka-1215</p>
+                        <p><a href="allpage/location.html">Find Direct Location</a></p><br />
+                        <p>+88 (017) 21760389<br />+88 (015) 58937635</p>
+                    </div>
+                </div>
+                <div id="otherinformationarea" style="width:30%;height:100%; float:left;">
+                    <div id="contacth" style="width:100%;height:40px;color:white;margin-bottom:15px;margin-top:40px;margin-left:50px;">
+                        <h4>OTHERS INFORMATION</h4>
+                    </div>
+                    <div id="contactiocn" style="width:60px;float:left;">
+
+                        <a><i class="fa fa-address-card" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i></a>
+                        <a><i class="fa fa-cog" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i></a>
+                        <a><i class="fa fa-location-arrow" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i></a>
+                        <i class="fa fa-krw" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i>
+                        <a><i class="fa fa-phone-square" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i></a>
+                        <i class="fa fa-apple" aria-hidden="true" style="width:100%;float:left;font-size:20px;color:white;"></i>
+                    </div>
+                    <div id="contactstring" style="width:150px;float:left;margin-left:20px;color:white;font-size:14px;margin-top:15px;">
+                        <p>Contact Card<br /></p>
+                        <p>Gadget & Gear,<br />Settings<br /><br /></p>
+                        <p>+88 (017) 21760389<br />+88 (015) 58937635</p>
+                        <p><a>WebSite</a></p>
+                    </div>
+                </div>
+                <div id="sendsmsarea" style="width:40%;height:100%; float:left;">
+                    <div id="smsus" style="width:100%;height:40px;color:white;margin-bottom:15px;margin-top:40px;margin-left:50px;text-align:center">
+                        <h4>SEND SMS US</h4>
+                    </div>
+                    <div id="smsform" style="width:100%;float:left;">
+                       <div style="margin-left:135px;">
+                           <label style="color:white;font-size:18px;font-weight:normal">Full Name</label><br />
+                           <input type="text" placeholder="Full Name" />
+                        </div>
+                        <div style="margin-left:135px;">
+                            <label style="color:white;font-size:18px;font-weight:normal">Email</label><br />
+                            <input type="text" placeholder="Email Address" />
+                        </div>
+                        <div style="margin-left:135px;float:left;">
+                            <label style="color:white;font-size:18px;font-weight:normal">SMS</label><br />
+                            <input type="text" placeholder="Write SMS here" />
+                        </div>
+                        <div style="float:right;margin-top:27px;">
+                            <button class="btn btn-success">SEND</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div id="footerarea" style="width:1080px;margin:20px auto;text-align:center;color:#333;height:50px;">
+            <p style="padding-top:15px;font-weight:bold;">&copy; Copyright stronly Prohabited. Right Reserved</p>
+        </div>
+        <div id="go-top" style="float:right; width:50px; height:50px; background:#CF4141; border-radius:50%; text-align:center;margin-right:20px;">
+            <p style="text-decoration: none; margin-top:15px; color: white; text-align: center"><a href="" style="text-decoration: none; margin-top: 20px; color: white; text-align: center">UP</a></p>
+        </div>
+        
+    </div>
+
+
+  
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            
+
+            $("#slideshow>div:gt(0)").hide();
+            setInterval(function () {
+                $("#slideshow>div:first")
+                .fadeOut(2000)
+                .next()
+                .fadeIn(2000)
+                .end()
+                .appendTo("#slideshow")
+            }, 4000);
+
+            //jQuery for item-datils
+            $("#items-details1").hide();
+            $("#items-details2").hide();
+            $("#items-details3").hide();
+            $("#items1").hover(function () {
+                $("#items-details1").toggle();
+            })
+            $("#items2").hover(function () {
+                $("#items-details2").toggle();
+            })
+            $("#items3").hover(function () {
+                $("#items-details3").toggle();
+            })
+
+            //cart area
+            $("#completeorderclk").hide();
+            $("#completeorder").click(function () {
+                $("#shoopingcartclk").hide();
+                $("#completeorderclk").show();
+                $("#checkoutclk").hide();
+            })
+            $("#shoopingcart").click(function () {
+                $("#shoopingcartclk").show();
+                $("#completeorderclk").hide();
+                $("#checkoutclk").hide();
+            })
+
+            $("#checkoutclk").hide();
+            $("#checkout").click(function () {
+                $("#checkoutclk").show();
+                $("#shoopingcartclk").hide();
+                $("#completeorderclk").hide();
+            })
+
+            $("#coupon").hide();
+            $("#showcoupon").click(function () {
+                $("#coupon").show();
+            })
+        })
+
+    </script>
+
+
+   
+</body>
+</html>

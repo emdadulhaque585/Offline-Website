@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{189F6233-5D8E-4B1C-AECB-8115A847B7A5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HtmlProject1</RootNamespace>
+    <AssemblyName>HtmlProject1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="allpage\game.html" />
+    <Content Include="slide\about.PNG" />
+    <Content Include="allpage\about.html" />
+    <Content Include="dragon\10th.png" />
+    <Content Include="dragon\11th.png" />
+    <Content Include="dragon\12th.png" />
+    <Content Include="dragon\13th.png" />
+    <Content Include="dragon\14th.png" />
+    <Content Include="dragon\15th.png" />
+    <Content Include="dragon\16th.png" />
+    <Content Include="dragon\1st.png" />
+    <Content Include="dragon\2nd.png" />
+    <Content Include="dragon\3rd.png" />
+    <Content Include="dragon\4th.png" />
+    <Content Include="dragon\5th.png" />
+    <Content Include="dragon\6th.png" />
+    <Content Include="dragon\7th.png" />
+    <Content Include="dragon\8th.png" />
+    <Content Include="dragon\9th.png" />
+    <Content Include="dragon\main.png" />
+    <Content Include="allpage\location.html" />
+    <Content Include="backgound\forback.jpg" />
+    <Content Include="backgound\forback1.jpg" />
+    <Content Include="backgound\forback3.jpg" />
+    <Content Include="backgound\forback4.jpg" />
+    <Content Include="backgound\forback5.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="allpage\gentsitem.html" />
+    <Content Include="allpage\kidsitem.html" />
+    <Content Include="allpage\ladiesitem.html" />
+    <Content Include="allpage\loginpage.html" />
+    <Content Include="allpage\menu.html" />
+    <Content Include="allpage\registerform.html" />
+    <Content Include="gameimg\1st.png" />
+    <Content Include="gameimg\2nd.png" />
+    <Content Include="gameimg\3rd.png" />
+    <Content Include="gameimg\4th.png" />
+    <Content Include="gameimg\s4.jpg" />
+    <Content Include="images\10th.png" />
+    <Content Include="images\11th.png" />
+    <Content Include="images\12th.png" />
+    <Content Include="images\13th.png" />
+    <Content Include="images\14th.png" />
+    <Content Include="images\15th.png" />
+    <Content Include="images\16th.png" />
+    <Content Include="images\1st.png" />
+    <Content Include="images\2nd.png" />
+    <Content Include="images\3rd.png" />
+    <Content Include="images\4th.png" />
+    <Content Include="images\5th.png" />
+    <Content Include="images\6th.png" />
+    <Content Include="images\7th.png" />
+    <Content Include="images\8th.png" />
+    <Content Include="images\9th.png" />
+    <Content Include="images\main.png" />
+    <Content Include="products\gents1.jpg" />
+    <Content Include="products\k1.jpg" />
+    <Content Include="products\k2.jpg" />
+    <Content Include="products\k3.jpg" />
+    <Content Include="products\k5.png" />
+    <Content Include="products\k6.jpg" />
+    <Content Include="products\k7.jpg" />
+    <Content Include="products\k8.jpg" />
+    <Content Include="products\k9.jpg" />
+    <Content Include="products\kids1.jpg" />
+    <Content Include="products\l1.jpg" />
+    <Content Include="products\l2.jpg" />
+    <Content Include="products\l3.jpg" />
+    <Content Include="products\l5.jpg" />
+    <Content Include="products\l6.jpg" />
+    <Content Include="products\ladies1.jpg" />
+    <Content Include="products\ll4.jpg" />
+    <Content Include="products\s1.jpg" />
+    <Content Include="products\s2.jpg" />
+    <Content Include="products\s3.jpg" />
+    <Content Include="products\s4.jpg" />
+    <Content Include="products\s5.jpg" />
+    <Content Include="products\s6.jpg" />
+    <Content Include="products\s7.jpg" />
+    <Content Include="products\s8.jpg" />
+    <Content Include="products\s9.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="homepage.html" />
+    <Content Include="slide\shirt.jpg" />
+    <Content Include="slide\shirt1.jpg" />
+    <Content Include="slide\slide02.jpg" />
+    <Content Include="slide\slide03.jpeg" />
+    <Content Include="slide\slide7.jpg" />
+    <Content Include="slide\slide8.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36552</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:36552/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
